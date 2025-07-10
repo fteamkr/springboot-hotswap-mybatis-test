@@ -17,5 +17,7 @@ public class MybatisTestDto {
 
         String tableName;
 
+        String tableType;
+
     }
 }
