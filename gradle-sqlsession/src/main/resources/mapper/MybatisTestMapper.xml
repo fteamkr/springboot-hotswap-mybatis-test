@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="hotswap.mybatis.gradle_sqlsession.MybatisTestMapper">
+<!-- https://mybatis.org/mybatis-3/sqlmap-xml.html -->
+
+    <!-- TABLE_CATALOG  	TABLE_SCHEMA  	TABLE_NAME  	TABLE_TYPE  	IS_INSERTABLE_INTO  	COMMIT_ACTION  	STORAGE_TYPE  	REMARKS  	LAST_MODIFICATION  	TABLE_CLASS  	ROW_COUNT_ESTIMATE -->
+    <select id="selectH2InformationSchemaTables" resultType="hotswap.mybatis.gradle_sqlsession.MybatisTestDto$H2InformationSchema">
+        SELECT TABLE_CATALOG, TABLE_SCHEMA, TABLE_NAME, TABLE_TYPE FROM INFORMATION_SCHEMA.TABLES
+    </select>
+
+</mapper>
