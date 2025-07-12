@@ -105,6 +105,16 @@
 				</configuration>
 			</plugin>
 		</plugins>
+
+		<resources>
+			<!-- https://dahye-jeong.gitbook.io/spring/spring/2021-02-15-spring-boot/2021-02-10-boot-mybatis -->
+			<resource>
+				<directory>src/main/java</directory>
+				<includes>
+					<include>**/*Mapper.xml</include>
+				</includes>
+			</resource>
+		</resources>
 	</build>
 
 </project>

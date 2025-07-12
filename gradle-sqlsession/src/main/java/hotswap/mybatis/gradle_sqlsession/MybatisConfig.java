@@ -12,8 +12,8 @@ import javax.sql.DataSource;
 /**
  * MyBatis Config
  *
- * @see https://mybatis.org/spring/getting-started.html
- * @see https://mybatis.org/spring/sqlsession.html
+ * @see <a href="https://mybatis.org/spring/getting-started.html">MyBatis-Spring - Getting Started</a>
+ * @see <a href="https://mybatis.org/spring/sqlsession.html">MyBatis-Spring - Using an SqlSession</a>
  */
 @Configuration
 public class MybatisConfig {
@@ -27,7 +27,7 @@ public class MybatisConfig {
         SqlSessionFactoryBean factoryBean = new SqlSessionFactoryBean();
         factoryBean.setConfiguration(configuration);
         factoryBean.setDataSource(dataSource);
-        factoryBean.setMapperLocations(new PathMatchingResourcePatternResolver().getResources("classpath:mapper/**/*Mapper.xml"));
+        factoryBean.setMapperLocations(new PathMatchingResourcePatternResolver().getResources("classpath*:**/*Mapper.xml"));
         return factoryBean.getObject();
     }
 

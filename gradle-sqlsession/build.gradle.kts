@@ -19,6 +19,17 @@ configurations {
 	}
 }
 
+sourceSets {
+	// https://docs.gradle.org/current/dsl/org.gradle.api.tasks.SourceSet.html
+	main {
+		resources {
+			// https://docs.gradle.org/current/dsl/org.gradle.api.tasks.SourceSet.html#org.gradle.api.tasks.SourceSet:resources
+			srcDirs("src/main/java")
+			include("**/*.properties", "**/*.xml")
+		}
+	}
+}
+
 repositories {
 	mavenCentral()
 }
